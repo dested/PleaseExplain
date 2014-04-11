@@ -1,0 +1,24 @@
+<div class="question" ng-repeat="question in model.questions">
+
+    <div class="votes">{{question.votes}}</div>
+    <div class="answers">{{question.answers}}</div>
+    <div class="views">{{question.views}}</div>
+    <div class="content">
+        <span class="questionText">
+            {{question.text}}
+        </span>
+        <span class="tagBox">
+            <span clas="tag" ng-repeat="tag in question.tags">
+                {{tag.text}}
+            </span>
+        </span>
+        <span class="lastUpdatedTime">
+            {{question.lastUpdatedTime}}
+        </span>
+        <span class="lastPostedUser">
+            {{question.lastPostedUser}}
+        </span>
+    </div>
+</div>
+
+<button ng-click="callback.createQuestion()">Create!</button>

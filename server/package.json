@@ -1,0 +1,22 @@
+{
+  "name": "PleaseExplainServer",
+  "version": "0.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "exit 1"
+  },
+  "repository": "",
+  "author": "",
+  "license": "BSD",
+  "dependencies": {
+    "express": "~4.0.0",
+    "mongoose": "^3.8.8",
+    "body-parser": "^1.0.1",
+    "errorhandler": "^1.0.0",
+    "method-override": "^1.0.0",
+    "requirejs": "^2.1.11",
+    "q": "^1.0.1",
+    "express-promise": "^0.1.9"
+  }
+}
