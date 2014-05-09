@@ -25,4 +25,4 @@ angular.module('PleaseExplain.controllers', [])
     }])
     .controller('QuestionCtrl', [function () {
 
-    }]); 
+    }]);

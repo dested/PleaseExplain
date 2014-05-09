@@ -7,9 +7,7 @@ var clean = require('gulp-clean');
 var insert = require('gulp-insert');
 
 var codePaths = ['Client/js/**/*.js', 'Common/**/*.js', '!**/vendor/**', '!**/node_modules/**'];
-
 var libraryPaths = ['Client/vendor/**/*.*'];
-
 var htmlPaths = ['Client/**/*.html'];
 var imagePaths = ['Client/images/**/*.png'];
 var cssPaths = ['Client/css/**/*.css'];

@@ -1,7 +1,7 @@
 var gulp = require('gulp');
 
 
-var concat = require('gulp-concat');
+var concat = require('gulp-concat-sourcemap');
 var uglify = require('gulp-uglify');
 var clean = require('gulp-clean');
 var insert = require('gulp-insert');

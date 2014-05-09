@@ -23,12 +23,10 @@ define('main', ['api'], function (api) {
     app.use(require('errorhandler')({ dumpExceptions: true, showStack: true }));
 
     app.get('/questions', function (req, res) {
-
         res.json(api.getQuestions());
     });
-    app.post('/createQuestion', function (req, res) {
-
-        res.json(api.createQuestion(req.body));
+    app.post('/askQuestion', function (req, res) {
+        res.json(api.askQuestion(req.body));
     });
 
     app.set('port', 2000);

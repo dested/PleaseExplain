@@ -19,6 +19,7 @@
     "gulp-util": "^2.2.14",
     "express": "^4.0.0",
     "gulp-watch": "^0.5.4",
-    "gulp-nodemon": "^1.0.2"
+    "gulp-nodemon": "^1.0.2",
+    "gulp-concat-sourcemap": "^1.2.1"
   }
 }

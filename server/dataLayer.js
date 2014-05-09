@@ -10,7 +10,7 @@ define('dataLayer', [], function () {
         mongoose.connect('mongodb://localhost/pleaseExplain');
     }
 
-    DataLayer.prototype.getQuestions = function () {
+    DataLayer.prototype.getQuestions = function (questionFilterModel) {
         var deferred = Q.defer();
 
         Question.find().exec(function (err, data) {
@@ -19,18 +19,34 @@ define('dataLayer', [], function () {
 
         return deferred.promise;
     };
-    DataLayer.prototype.createQuestion = function (questionModel) {
+    DataLayer.prototype.getPotentialTags = function (potentialTag) {
         var deferred = Q.defer();
-        console.log(questionModel);
-        var question = new Question(questionModel);
+        Tag.find({ text: new RegExp("."+potentialTag+".",'i') })
+           .limit(10)
+           .exec(function (err, data) {
+               deferred.resolve(data);
+           });
+        return deferred.promise;
+    };
+    DataLayer.prototype.askQuestion = function (askQuestionModel) {
+        var deferred = Q.defer();
+        var question = new Question(askQuestionModel);
 
         question.save(function (err, data) {
             deferred.resolve(data);
         });
+        return deferred.promise;
+    };
+    DataLayer.prototype.getQuestion = function (questionId) {
+        var deferred = Q.defer();
 
+        Question.find().exec(function (err, data) {
+            deferred.resolve(data);
+        });
 
         return deferred.promise;
     };
+
     return  new DataLayer();
 });
 
