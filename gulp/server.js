@@ -19,8 +19,7 @@ gulp.task('server.clean', function () {
 });
 
 gulp.task('server.packageNodeModules', function () {
-    return gulp.src(serverNodeModulePath)
-        .pipe(gulp.dest('build/server/node_modules'));
+//    return gulp.src(serverNodeModulePath).pipe(gulp.dest('build/server/node_modules'));
 });
 
 gulp.task('server.packageScripts', function () {

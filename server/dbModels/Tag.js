@@ -1,9 +1,4 @@
-function dbTag(){
-    this.text = '';
-}
-
-dbTag.schema=function(){
-    return {
-        text:String
-    };
-};
+function dbTag() {
+    this.TagId = 0;
+    this.Text = '';
+} 

@@ -6,11 +6,11 @@ var uglify = require('gulp-uglify');
 var clean = require('gulp-clean');
 var insert = require('gulp-insert');
 
-var codePaths = ['Client/js/**/*.js', 'Common/**/*.js', '!**/vendor/**', '!**/node_modules/**'];
-var libraryPaths = ['Client/vendor/**/*.*'];
-var htmlPaths = ['Client/**/*.html'];
-var imagePaths = ['Client/images/**/*.png'];
-var cssPaths = ['Client/css/**/*.css'];
+var codePaths = ['client/js/**/*.js', 'Common/**/*.js', '!**/vendor/**', '!**/node_modules/**'];
+var libraryPaths = ['client/vendor/**/*.*'];
+var htmlPaths = ['client/**/*.html'];
+var imagePaths = ['client/images/**/*.png'];
+var cssPaths = ['client/css/**/*.css'];
 
 
 gulp.task('client.clean', function () {

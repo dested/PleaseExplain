@@ -8,6 +8,7 @@ var runSequence = require('run-sequence');
 
 
 gulp.task('default', function (callback) {
+    process.chdir('../');
 
     runSequence(
         [
@@ -18,7 +19,6 @@ gulp.task('default', function (callback) {
 });
 
 gulp.task('client', function (callback) {
-
     runSequence(
           'client.clean',
         [
@@ -32,7 +32,6 @@ gulp.task('client', function (callback) {
 });
 
 gulp.task('server', function (callback) {
-    process.chdir('../');
     runSequence(
 //        'server.clean',
         [

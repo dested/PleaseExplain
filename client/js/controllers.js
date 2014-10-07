@@ -7,7 +7,7 @@ angular.module('PleaseExplain.controllers', [])
         $scope.callback.refreshQuestions = function () {
             questionListService.getQuestionList().then(function (questions) {
                 $scope.model.questions = questions.map(function (question) {
-                    return new QuestionInListViewModel(question)
+                    return new QuestionInListViewModel(question);
                 });
             });
         };

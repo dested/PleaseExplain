@@ -5,7 +5,7 @@ define('api', ['dataLayer'], function (dataLayer) {
 
     API.prototype.getQuestions = function (questionFilterModel) {
         var deferred = Q.defer();
-        dataLayer.getQuestions().then(function (data) {
+        dataLayer.getQuestions(questionFilterModel).then(function (data) {
             deferred.resolve(data.map(function (dbQuestion) {
                 return QuestionInListModel.populateFromDb(dbQuestion);
             }));
